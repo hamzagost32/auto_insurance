@@ -1,0 +1,245 @@
+html {
+    padding: env(safe-area-inset);
+}
+
+/* Add global type & size if you want */
+html, body {
+    overflow-x: hidden;
+    font-family: 'Oswald', sans-serif;
+    background: white;
+    color: #fff;
+    /* font-size: 1.3rem; */
+    font-weight: 300;
+}
+
+
+/* U can add multiple element like h1 h2 tags */
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*  Custom navbar i don't use bg-light or bg-dark that come with bootstrap */
+.navbar {
+    border-bottom: #e64d1e .15rem solid;
+    background: rgba(0, 0, 0, .4) !important; /* don't forget to override defualt navbar bg color */
+    padding: 1.3rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+    transition: all .5s ease;
+}
+
+.navbar a{
+    color: #fff;
+}
+
+/*  when scroll down it will be added with javascript  */
+.dark {
+    background-color: rgba(0, 0, 0, .8)!important;
+    padding: .6rem 0;
+    z-index: 1000;
+}
+
+/*  General text color used for underline do find replace this hash color */
+.text-auto {
+    color: #e64d1e;
+}
+
+.nav-menu .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: #e64d1e;
+}
+
+.logo {
+    font-weight: 700;
+    /* font-size: 2rem; */
+}
+
+
+.show-nav {
+    display: flex;
+}
+
+.hide-nav {
+    display: none;
+}
+
+/* i used font awsome bars if you used bg-dark or bg-light on navbar you dont't need this icon */
+.custom-toggler-icon {
+    color: white;
+    font-size: 1.6rem;
+}
+
+/* start Home section */
+
+
+/* Banner or home screen */
+#home-section {
+    background-image: url('../img/home-landing-page.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh; /* some browser don't support this used with % */
+    /* min-height: 100%;  */
+}
+
+#home-section .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    
+}
+
+/* your hero content with top use rem insted of pixel */
+#home-section .home-inner {
+    padding-top: 7rem;
+}
+
+/* svg it's font awsome you can use fas or fab depend on your icon */
+#home-section .svg-inline--fa {
+    color: #e64d1e;
+    font-size: 1.8rem;
+}
+
+.bg-custom {
+    background: linear-gradient(rgba(37, 48, 97, 0.233), rgba(84, 91, 122, 0.8));
+}
+
+/* Main form same bg color agin */
+.card-form {
+    background: #e64d1e;
+    /* padding: .6rem; */
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.6);
+}
+
+.card-form p {
+    font-size: .8rem;
+}
+
+/* End of Home section */
+
+/* Start Showcase cards */
+
+
+/* you can use animation insted */
+.showcase-card .svg-inline--fa {
+    transition: all .3s ease-in-out;
+    transform: scale(.8) translateX(-8rem);
+}
+
+.showcase-card:hover .svg-inline--fa {
+    transform: scale(1) translateX(0);
+   
+   
+}
+
+/* not important as you think */
+.underline {
+    width: 1rem;
+    margin: auto;
+    width: 150px;
+    border: 3px solid #e64d1e;
+}
+
+/* change the alpha and see what happen */
+.card-ovelay .card {
+    background: #e64d1e;
+    padding: .6rem;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.6);
+}
+
+
+/* End of Showcase cards */
+
+
+/* Team Section */
+
+.team-card {
+    transition: all .6s ease;
+    overflow: hidden;
+    /* make sure overflow hidden to hide incoming icons from below */
+}
+
+/* just some font Awesome */
+.social {
+   transition: all .4s  ease-in-out;
+   transform: translateY(150px);
+   /* change the translate form Y to X */
+
+   /* transform: translateX(150px); */
+   /* add negative number to it */
+}
+
+.team-card:hover .social {
+    transform: translateY(0);
+    /* it will back to orignal place on hover */
+}
+
+/* End of Team Section */
+
+
+
+
+/* projects */
+.card {
+    height: 100%;
+    /* use 100% if you want all card have same height with deffirent content */
+    border-radius: 0;
+    text-align: center;
+    border: .1rem solid rgba(0, 0, 0, .075);
+    box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+    transition: transform .4s ease;
+}
+
+.card-project:hover {
+    transform: scale(0.95);
+}
+
+/* This plugin for owl carousel easy to use tnan bootstrap carousel*/
+button.owl-dot.active span, button.owl-dot:hover span {
+    background: #e64d1e !important;
+}
+/* end of projects */
+
+
+/* footer */
+.footer-link a {
+    color: #eee;
+    font-size: .9rem;
+    transition: .3s;
+}
+
+.footer-link a:hover {
+    color: #e64d1e;
+    text-decoration: none;
+}
+
+/* end of footer */
+
+
+/* Under 990px tablet & mobile */
+
+/* navbar will collapse at lg so chose this number 990 */
+@media (max-width: 990px) {
+    .navbar {
+        border-bottom: #e64d1e .12rem solid;
+        padding: 0.8rem 1rem;
+        letter-spacing: .08rem;
+        font-size: .7rem;
+    }
+
+    .hide-nav {
+        display: flex;
+    }
+
+    
+    .p-sm {
+      padding-bottom: .5rem;
+    }
+}
