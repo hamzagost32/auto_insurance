@@ -1,6 +1,6 @@
 # Auto Insurance
 
-Auto Insurance is a HTML5 Website quick and easy for getting insurance online (this it's just front end this will not work).
+Auto Insurance is a HTML5 Website quick and easy for getting insurance online.
 
 
 
